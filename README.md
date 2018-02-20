@@ -74,7 +74,7 @@ List an 3rd party libraries, icons, graphics, or other assets you used in your a
     
     
     
-    # Project 6 - *Twitter*
+# Project 6 - *Twitter*
 
 Time spent: **8** hours spent in total
 
