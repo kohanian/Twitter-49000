@@ -28,6 +28,11 @@ class TweetCell: UITableViewCell {
             tweetTextLabel.text = tweet.text
             print(tweet.user.profile_image_url)
             let url = URL(string: tweet.user.profile_image_url)
+            tweetUserImageView.layer.borderWidth = 1
+            tweetUserImageView.layer.masksToBounds = false
+            tweetUserImageView.layer.borderColor = UIColor.white.cgColor
+            tweetUserImageView.layer.cornerRadius = tweetUserImageView.frame.height/2
+            tweetUserImageView.clipsToBounds = true
             tweetUserImageView.af_setImage(withURL: url!)
             tweetUserName.text = tweet.user.name
             tweetDateCreate.text = tweet.createAtDate.shortTimeAgoSinceNow

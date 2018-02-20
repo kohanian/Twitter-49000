@@ -21,7 +21,7 @@ class Tweet {
     var user: User // Contains name, screenname, etc. of tweet author
     var createdAtString: String // Display date
     var createAtDate: Date
-    
+//    var entities: Entities
     // MARK: - Create initializer with dictionary
     init(dictionary: [String: Any]) {
         id = dictionary["id"] as! Int64
@@ -31,6 +31,7 @@ class Tweet {
         retweetCount = dictionary["retweet_count"] as! Int
         retweeted = dictionary["retweeted"] as! Bool
         replyCount = dictionary["reply_count"] as? Int
+//        entities = dictionary["entities"] as! Entities
         
         let user = dictionary["user"] as! [String: Any]
         self.user = User(dictionary: user)
